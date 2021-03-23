@@ -1,0 +1,25 @@
+﻿diff --git a/Engine/Source/Programs/UnrealBuildTool/Platform/Windows/VCToolChain.cs b/Engine/Source/Programs/UnrealBuildTool/Platform/Windows/VCToolChain.cs
+index 1183cc16888..7829c7120d8 100644
+--- a/Engine/Source/Programs/UnrealBuildTool/Platform/Windows/VCToolChain.cs
++++ b/Engine/Source/Programs/UnrealBuildTool/Platform/Windows/VCToolChain.cs
+@@ -482,6 +482,7 @@ namespace UnrealBuildTool
+ 			{
+ 				// Explicitly compile the file as C++.
+ 				Arguments.Add("/TP");
++				Arguments.Add("/wd4800");
+ 			}
+ 			else
+ 			{
+diff --git a/Engine/Source/ThirdParty/PhysX3/PxShared/src/foundation/include/PsAllocator.h b/Engine/Source/ThirdParty/PhysX3/PxShared/src/foundation/include/PsAllocator.h
+index f988b6c5c4b..a53d334ff24 100644
+--- a/Engine/Source/ThirdParty/PhysX3/PxShared/src/foundation/include/PsAllocator.h
++++ b/Engine/Source/ThirdParty/PhysX3/PxShared/src/foundation/include/PsAllocator.h
+@@ -37,7 +37,7 @@
+ 
+ #if(PX_WINDOWS_FAMILY || PX_XBOXONE)
+ #include <exception>
+-#include <typeinfo.h>
++#include <typeinfo>
+ #endif
+ #if(PX_APPLE_FAMILY)
+ #include <typeinfo>
