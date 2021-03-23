@@ -26,6 +26,10 @@ Individual Components
 Workloads:
 - Desktop Development with C++
 
+### ZED SDK
+
+In order for the project to work, you need the ZED SDK 3.1.2 to be installed. The SDK is the latest one that is currently supported by the [Stereolabs PlugIn](https://github.com/stereolabs/zed-unreal-plugin). It depends on [CUDA 10.2](https://developer.nvidia.com/cuda-10.2-download-archive), which also needs to be installed on the system. Note that there may be problems, if multiple versions of CUDA are installed in parallel.
+
 ### Patching Unreal Engine to build with VS 2019 and latest Windows 10 SDK
 
 Start by cloning the UE4 ZED fork.
@@ -40,4 +44,18 @@ Next, download and copy the contents from the *patch* folder from this repositor
 git apply vs2019.patch
 ```
 
-Finally, continue by running `Setup.bat` and `GenerateProjectFiles.bat`, as described in the [ZED documentation](https://www.stereolabs.com/docs/unreal/engine-setup/).
+Finally, continue by running `Setup.bat` and `GenerateProjectFiles.bat`, as described in the [ZED documentation](https://www.stereolabs.com/docs/unreal/engine-setup/). Build the project in order to compile your custom UE4.21 distribution.
+
+## Setup
+
+Creating the project is actually pretty straightforward. Start by cloning the repository:
+
+```shell
+git clone --recurse-submodules https://github.com/Aschratt/Unreal-ZED-Playground.git .
+```
+
+Right click the *ZedPlayground.uproject* file and select "Switch Unreal Engine version...". Select your custom source build. Then right click the project again and select *Generate Visual Studio project files*.
+
+**Important:** If you are using Visual Studio 2019, opening the solution will ask you to update the Toolset and Windows SDK version. Select *Don't update* on both before you continue! If you did hit update by mistake, try re-generating the project files.
+
+When launching the *ZedPlayground* application, make sure you've selected the build configuration used for building the engine with (e.g. Development_Editor/Win64).
