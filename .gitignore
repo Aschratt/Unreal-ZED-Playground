@@ -352,6 +352,8 @@ MigrationBackup/
 # UE4 intermediate and binaries directory.
 Intermediate/
 Binaries/
+DerivedDataCache/
+Saved/
 
 # Exclude solution file.
 ZedPlayground.sln
