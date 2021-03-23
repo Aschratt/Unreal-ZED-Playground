@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{061AB7B5-4745-DF0B-2180-9EA6F399B2A3}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "ZedPlayground",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
