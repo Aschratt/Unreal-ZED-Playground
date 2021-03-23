@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# UE4 intermediate and binaries directory.
+Intermediate/
+Binaries/
