@@ -355,5 +355,8 @@ Binaries/
 DerivedDataCache/
 Saved/
 
+# Ignore build data.
+*_BuiltData.uasset
+
 # Exclude solution file.
 ZedPlayground.sln
